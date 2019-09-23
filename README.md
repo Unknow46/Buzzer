@@ -1,3 +1,3 @@
 Moteur de jeu buzzeurs 
 
-https://discord.gg/42njGX
+Version web et mobile d'un jeu de question à choix multiple
