@@ -24,5 +24,5 @@
 
 ## Solution Technique
 
-- Language: ?
+- Langage: ?
 - Framework: ?
