@@ -1,8 +1,6 @@
 Moteur de jeu buzzeurs 
 Version web et mobile d'un jeu de question à choix multiple
 
-Dans 2 semaines sur icampus :
+L'invitation à une durée limitée une fois créé donc normal, si besoin envoie ton code discord pour que je t'ajoute 
 
-**Note de clarification**
-**Bachlog**
-**sprint bachlog sprint 1**
+https://discord.gg/42njGX
