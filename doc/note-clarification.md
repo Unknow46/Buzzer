@@ -26,6 +26,10 @@ Fonctionnalités:
 - Récupération des questions sur une API
 - Synchronisation de l'état du jeu entre plusieurs affichages
 
+Gestion du score :
+- Bloquer le buzzer après une réponse négative ( ce débloque si toutes les équipes ont buzzés et n'ont pas trouvé la réponse )
+- Gagne moins de points (ou plus) si la réponse est donnée plus tard après plusieurs réponses négatives
+
 ### 2) Une solution pour le "Quizz Master" contenant deux vues (Vue QM et vue joueurs)
 
 #### Vue QM
