@@ -1,13 +1,13 @@
 <template>
   <div id="MCQ">
     <h1>{{ question }}</h1>
-    <ol>
+    <ul>
       <li>A - {{ reponse1 }}</li>
       <li>B - {{ reponse2 }}</li>
       <li>C - {{ reponse3 }}</li>
       <li>D - {{ reponse4 }}</li>
       
-    </ol>
+    </ul>
   </div>
 </template>
 
@@ -21,7 +21,7 @@ export default class MCQ extends Vue{
   reponse3:String = 'Reponse'
   reponse4:String = 'Reponse'
 
-  majQuestion() : void{
+  updateQuestion() : void{
     //var socket = io();
     //socket.emit(NEXT_QUESTION)
     //question = 
@@ -33,12 +33,19 @@ export default class MCQ extends Vue{
 <style scoped>
 #MCQ{
   width: 70%;
+  color: white;
+  padding-top: 60px;
+  padding-left: 40px;
+  font-size: 20px;
+}
+ul{
+  list-style: none;
 }
 li {
   margin: 10px 60px;
   font-size: 20px;
   color: white;
-  background-color: grey;
+  background-color: #2f3136;
   padding: 20px;
 }
 a {

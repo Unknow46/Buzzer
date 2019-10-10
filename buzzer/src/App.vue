@@ -21,10 +21,8 @@ export default Vue.extend({
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
-  margin-top: 60px;
-  margin-left: 40px;
-  font-size: 20px;
+  background-color: grey;
+
 }
 
 </style>
