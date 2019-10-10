@@ -1,4 +1,4 @@
-# buzzer
+# my-project-name
 
 ## Project setup
 ```
