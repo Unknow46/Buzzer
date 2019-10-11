@@ -15,29 +15,27 @@
 import Vue from 'vue';
 
 export default class MCQ extends Vue{
+
   question:String = 'Question ...'
   reponse1:String = 'Reponse'
   reponse2:String = 'Reponse'
   reponse3:String = 'Reponse'
   reponse4:String = 'Reponse'
-
-  updateQuestion() : void{
-    //var socket = io();
-    //socket.emit(NEXT_QUESTION)
-    //question = 
-  }
+ 
+    updateMCQ() : void{
+      //var socket = io();
+      //socket.emit(NEXT_QUESTION)
+      //question = 
+      //reponse1 = 
+      //reponse2 = 
+      //reponse3 = 
+      //reponse4 = 
+    }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-#MCQ{
-  width: 70%;
-  color: white;
-  padding-top: 60px;
-  padding-left: 40px;
-  font-size: 20px;
-}
 ul{
   list-style: none;
 }

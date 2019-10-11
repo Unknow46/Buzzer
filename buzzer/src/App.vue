@@ -1,17 +1,17 @@
 <template>
   <div id="app">
-    <MCQ/>
+    <Question/>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
-import MCQ from './components/MCQComponent.vue';
+import Question from './components/QestionComponent.vue';
 
 export default Vue.extend({
   name: 'app',
   components: {
-    MCQ,
+    Question,
   },
 });
 </script>
