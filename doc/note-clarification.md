@@ -7,6 +7,8 @@ Url du projet : https://github.com/Unknow46/Buzzer
 - Loïc Delava
 - Bogdan Cordier
 - Nathan Sens
+- Raphaël Bauvin
+- Youssef Touggani
 
 
 ## Éléments fournis
