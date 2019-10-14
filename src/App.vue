@@ -1,16 +1,18 @@
 <template>
   <div id="app">
-    Hello World
+    <HelloWorld/>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
-import Question from './components/QestionComponent.vue';
+import HelloWorld from './components/HelloWorld.vue';
 
 export default Vue.extend({
   name: 'app',
-
+  components:{
+    HelloWorld,
+  },
 });
 </script>
 
