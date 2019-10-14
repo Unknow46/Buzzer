@@ -2,6 +2,11 @@
 
 Url du projet : https://github.com/Unknow46/Buzzer
 
+## Equipe
+
+- Bogdan Cordier
+
+
 ## Éléments fournis
 
 Un moteur de jeu visant deux plateformes :
