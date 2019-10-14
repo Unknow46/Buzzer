@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    Hello World
+    <Question/>
   </div>
 </template>
 
@@ -10,7 +10,9 @@ import Question from './components/QestionComponent.vue';
 
 export default Vue.extend({
   name: 'app',
-
+  components: {
+    Question,
+  },
 });
 </script>
 
