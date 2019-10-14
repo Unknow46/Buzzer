@@ -62,7 +62,12 @@ Fonctionnalités:
     
 ## Interfaces:
 
-Voir mockup : https://create.piktochart.com/output/41063755-untitled-presentation
+Voir mockup en entier : https://create.piktochart.com/output/41063755-untitled-presentation
+
+![Creation](https://github.com/Unknow46/Buzzer/blob/master/doc/Mokeup_v0.2/000.png "Creation")
+![VueJoueur2](https://github.com/Unknow46/Buzzer/blob/master/doc/Mokeup_v0.2/003.png "VueJoueur2")
+![VuePresentation2](https://github.com/Unknow46/Buzzer/blob/master/doc/Mokeup_v0.2/005.png "VuePresentation2")
+![VueAdmin](https://github.com/Unknow46/Buzzer/blob/master/doc/Mokeup_v0.2/007.png "VueAdmin")
 
 ## Solution Technique
 
