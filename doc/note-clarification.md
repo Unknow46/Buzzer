@@ -5,6 +5,7 @@ Url du projet : https://github.com/Unknow46/Buzzer
 ## Equipe
 
 - Bogdan Cordier
+- Nathan Sens
 
 
 ## Éléments fournis
