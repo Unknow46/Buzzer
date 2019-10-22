@@ -1,0 +1,8 @@
+Problèmes qui ont pris beaucoup de temps :
+- apprendre l'utilisation de vue et typescript
+- utilisation d'une socket dans une vue avec typescript
+
+  -> Solution : passage à Vue et Socket seulement car TypeScript trop de soucis dans le projet pour peu d'utilité
+
+Autres problèmes :
+- la Socket n'est pas exporté dans toutes les vues

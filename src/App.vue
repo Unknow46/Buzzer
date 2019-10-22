@@ -5,7 +5,7 @@
 </template>
 
 <script>
-  import Question from './components/QestionComponent.vue'
+import Question from './components/QestionComponent.vue'
 
 export default {
   name: 'app',
