@@ -24,8 +24,17 @@ export default {
     reponse4 : 'Reponse'
     }
   },
+  sockets: {
+    connect: function () {
+      //console.log('socket connected')
+    },
+    customEmit: function () {
+      //console.log('this method was fired by the socket server. eg: io.emit("customEmit", data)')
+    }
+  },
   methods:{
     updateMCQ:function(){
+      this.$socket.emit('newGame');
       //console.log(this.$socket.client.emit('newGame'));
       //console.log("yes");
       //socket.emit(NEXT_QUESTION)
