@@ -25,14 +25,17 @@ export default {
     }
   },
   sockets: {
-    connect: function () {
-      //console.log('socket connected')
-    },
-    customEmit: function () {
-      //console.log('this method was fired by the socket server. eg: io.emit("customEmit", data)')
-    }
-  },
-  methods:{
+            connect: function () {
+                log.d('socket connected')
+            },
+            'update:teams': function () {
+                log.d("Received data on Teams")
+            },
+            'update:state': function (state) {
+                log.d(`Received state ${state}`)
+            }
+        },
+  methods: {
     updateMCQ:function(){
       this.$socket.emit('newGame' );
       //console.log(this.$socket.client.emit('newGame'));
