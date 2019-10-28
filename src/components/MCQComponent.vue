@@ -8,6 +8,7 @@
       <li>D - {{ reponse4 }}</li>
       
     </ul>
+    <button id="round" @click="updateMCQ">Next question</button>
   </div>
 </template>
 
@@ -26,26 +27,21 @@ export default {
   },
   sockets: {
             connect: function () {
-                log.d('socket connected')
+                console.log('socket connected')
             },
-            'update:teams': function () {
-                log.d("Received data on Teams")
+            'update:questions': function (data) {
+                console.log(`Received data on Questions ${data}`)
+                this.question = data;
             },
             'update:state': function (state) {
-                log.d(`Received state ${state}`)
+                console.log(`Received state ${state}`)
             }
         },
   methods: {
     updateMCQ:function(){
-      this.$socket.emit('newGame' );
-      //console.log(this.$socket.client.emit('newGame'));
-      //console.log("yes");
-      //socket.emit(NEXT_QUESTION)
-      //question = 
-      //reponse1 = 
-      //reponse2 = 
-      //reponse3 = 
-      //reponse4  
+      this.$socket.emit('newGame',2,3);
+      let json = this.$socket.emit('nextQuestion');
+
     }
   }
 }
