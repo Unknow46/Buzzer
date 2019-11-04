@@ -22,5 +22,11 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
+  background-color: #888888;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  min-height: 100vh;
 }
+
 </style>

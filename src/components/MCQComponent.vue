@@ -8,7 +8,7 @@
       <li>D - {{ reponse4 }}</li>
       
     </ul>
-    <button id="round" @click="updateMCQ">Next question</button>
+    <b-button id="round" @click="updateMCQ">Next question</b-button>
   </div>
 </template>
 
@@ -40,8 +40,7 @@ export default {
   methods: {
     updateMCQ:function(){
       this.$socket.emit('newGame',2,3);
-      let json = this.$socket.emit('nextQuestion');
-
+      this.$socket.emit('nextQuestion');
     }
   }
 }
