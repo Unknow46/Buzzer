@@ -1,13 +1,7 @@
 <template>
-  <div id="MCQ">
-    <h1>{{ question }}</h1>
-    <ul>
-      <li>A - {{ reponse1 }}</li>
-      <li>B - {{ reponse2 }}</li>
-      <li>C - {{ reponse3 }}</li>
-      <li>D - {{ reponse4 }}</li>
-      
-    </ul>
+  <div id="Image">
+    <h1>Quelle est la référence de cet image ?</h1>
+    <b-img rounded src="require('../static/picture.jpg')" alt="image"></b-img>
   </div>
 </template>
 
@@ -17,11 +11,7 @@ export default {
   name: 'MCQ',
   data: function(){
     return {
-    question :'Question ...',
-    reponse1 : 'Reponse',
-    reponse2 : 'Reponse',
-    reponse3 : 'Reponse',
-    reponse4 : 'Reponse'
+    image:''
     }
   },
   sockets: {
@@ -40,18 +30,6 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-ul{
-  list-style: none;
-}
-li {
-  margin: 10px 60px;
-  font-size: 20px;
-  color: white;
-  background-color: #24292e;
-  padding: 20px;
-}
-a {
-  color: #42b983;
-}
+<style>
+
 </style>
