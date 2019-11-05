@@ -1,7 +1,12 @@
 <template>
   <div id="app">
-    
+    <div v-if="started">
     <Question/>
+    </div>
+    <div v-else>
+      <b-button @click="create">Créer la partie</b-button>
+      <b-spinner variant="light" label="Spinning"></b-spinner>
+    </div>
   </div>
 </template>
 
@@ -11,7 +16,18 @@ import Question from './components/QestionComponent.vue'
 export default {
   name: 'app',
   components: {
-    Question
+    Question,
+  },
+  data : function(){
+    return{
+      started : false
+    }
+  },
+  methods: {
+    create:function(){
+      this.$socket.emit('newGame',2,3);
+      this.started = true;
+    }
   }
 }
 

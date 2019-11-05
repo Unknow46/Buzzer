@@ -8,7 +8,7 @@
 <script lang="js">
 
 export default {
-  name: 'MCQ',
+  name: 'Image',
   data: function(){
     return {
     image:''

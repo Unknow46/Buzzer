@@ -35,7 +35,6 @@ export default {
   },
   methods: {
     updateMCQ:function(){
-      this.$socket.emit('newGame',2,3);
       this.$socket.emit('nextQuestion');
     }
   }

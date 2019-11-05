@@ -1,13 +1,12 @@
 <template>
   <div id="MCQ">
     <h1>{{ question }}</h1>
-    <ul>
-      <li>A - {{ reponse1 }}</li>
-      <li>B - {{ reponse2 }}</li>
-      <li>C - {{ reponse3 }}</li>
-      <li>D - {{ reponse4 }}</li>
-      
-    </ul>
+
+      <b-button disabled class="reponse" block variant="dark"> A -  {{ reponse1 }}</b-button>
+      <b-button disabled class="reponse" block variant="dark"> B -  {{ reponse2 }}</b-button>
+      <b-button disabled class="reponse" block variant="dark"> C -  {{ reponse3 }}</b-button>
+      <b-button disabled class="reponse" block variant="dark"> D -  {{ reponse4 }}</b-button>
+
   </div>
 </template>
 
@@ -30,7 +29,12 @@ export default {
             },
             'update:questions': function (data) {
                 console.log(`Received data on Questions ${data}`)
-                this.question = data;
+                this.question = data.question;
+                this.reponse1 = data.proposition[0];
+                this.reponse2 = data.proposition[1];
+                this.reponse3 = data.proposition[2];
+                this.reponse4 = data.proposition[3];
+
             },
             'update:state': function (state) {
                 console.log(`Received state ${state}`)
@@ -41,17 +45,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-ul{
-  list-style: none;
-}
-li {
-  margin: 10px 60px;
-  font-size: 20px;
-  color: white;
-  background-color: #24292e;
-  padding: 20px;
-}
-a {
-  color: #42b983;
+
+.reponse {
+  padding: 3%;
+  text-align: justify;
 }
 </style>
