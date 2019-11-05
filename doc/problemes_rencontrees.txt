@@ -1,8 +1,8 @@
 Problèmes qui ont pris beaucoup de temps :
-- apprendre l'utilisation de vue et typescript
-- utilisation d'une socket dans une vue avec typescript
+-> Utilisation de nouveaux framework : compréhension de la synthaxe et du fonctionnement de Vue et Typescript
+-> Utilisation d'une socket dans un contexte vue-Typescript-socket : socket non déclaré dans l'ensemble du projet
 
-  -> Solution : passage à Vue et Socket seulement car TypeScript trop de soucis dans le projet pour peu d'utilité
 
-Autres problèmes :
-- la Socket n'est pas exporté dans toutes les vues
+>>> Nous sommes donc passé sur un projet vue-socket car Typescript apporte plus d'inconvénient que d'avantage dans ce projet
+
+
