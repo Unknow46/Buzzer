@@ -43,11 +43,11 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-#questions{
-  width: 70%;
-  color: white;
-  padding-top: 60px;
-  padding-left: 40px;
-  font-size: 20px;
-}
+    #questions {
+        width: 70%;
+        color: white;
+        padding-top: 60px;
+        padding-left: 40px;
+        font-size: 20px;
+    }
 </style>
