@@ -1,18 +1,15 @@
 <template>
   <div id="app">
-    <Question/>
+    <b-nav tabs align="center">
+      <b-nav-item to='/test'>Test</b-nav-item>
+    </b-nav>
+    <!-- route outlet -->
+    <!-- component matched by the route will render here -->
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import Question from './components/QestionComponent.vue'
-
-export default {
-  name: 'app',
-  components: {
-    Question
-  }
-}
 
 </script>
 
@@ -28,5 +25,4 @@ export default {
   width: 100%;
   min-height: 100vh;
 }
-
 </style>

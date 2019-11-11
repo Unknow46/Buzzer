@@ -1,16 +1,19 @@
 import Vue from 'vue';
 import App from './App.vue';
-import NotFound from './pages/404.vue';
 import VueSocketIO from 'vue-socket.io';
+import VueRouter from 'vue-router';
 import BootstrapVue from 'bootstrap-vue';
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
+import { routes } from "./routes";
 
-const routes = {
-  '/':  App,
-};
+const router = new VueRouter({
+    mode: 'history',
+    routes
+});
 
 Vue.config.productionTip = false;
+Vue.use(VueRouter);
 Vue.use(BootstrapVue);
 Vue.use(new VueSocketIO({
   debug: true,
@@ -18,13 +21,6 @@ Vue.use(new VueSocketIO({
 }));
 
 new Vue({
-  data: {
-    currentRoute: window.location.pathname
-  },
-  computed: {
-    ViewComponent () {
-      return routes[this.currentRoute] || NotFound
-    }
-  },
-  render (h) { return h(this.ViewComponent) }
+    render: h => h(App),
+    router
 }).$mount('#app');
