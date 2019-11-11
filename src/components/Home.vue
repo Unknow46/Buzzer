@@ -19,7 +19,7 @@
             'update:state': function (state) {
                 log.d(`Received state ${state}`)
                 if (state === 'waiting for players') {
-                    this.$router.push('test')
+                    this.$router.push('game')
                 }
             }
         }
