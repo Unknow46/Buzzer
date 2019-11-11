@@ -7,6 +7,7 @@ import NotFound from './pages/404.vue';
 */
 export const routes = [
     { path: '/',  component: Home, name: 'home' },
-    { path: '/test', component: { template: '<div>Testing</div>' }, name: 'test' },
+    { path: '/admin', component: { template: '<div>Admin View (TODO)</div>' }, name: 'admin' },
+    { path: '/game', component: { template: '<div>Public Game View (TODO)</div>' }, name: 'game' },
     { path: '*', component: NotFound, name: '404' }
 ];
