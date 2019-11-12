@@ -28,8 +28,8 @@ export default {
   },
   data: function(){
     return {
-    Mcquestions : true,
-    Picture : false,
+    Mcquestions : false,
+    Picture : true,
     Audio : false,
     }
   },
