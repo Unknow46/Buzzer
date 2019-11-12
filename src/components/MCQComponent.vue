@@ -35,18 +35,17 @@
                 this.reponse2 = data.proposition[1];
                 this.reponse3 = data.proposition[2];
                 this.reponse4 = data.proposition[3];
-
             },
             'update:state': function (state) {
                 log.d(`Received state ${state}`)
             }
   }
 }
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
 .reponse {
   padding: 3%;
   text-align: justify;
