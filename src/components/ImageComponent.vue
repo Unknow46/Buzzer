@@ -1,7 +1,7 @@
 <template>
   <div id="Image">
     <h1>Quelle est la référence de cet image ?</h1>
-    <b-img rounded src="myImage" alt="image"></b-img>
+    <b-img :src="myImage" alt="image"></b-img>
   </div>
 </template>
 
@@ -11,7 +11,7 @@ export default {
   name: 'Image',
   data: function(){
     return {
-    myImage:''
+    myImage:'../assets/minecraft.jpg'
     }
   },
   sockets: {
