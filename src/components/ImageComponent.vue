@@ -1,11 +1,7 @@
 <template>
   <div id="Image">
     <h1>Quelle est la référence de cet image ?</h1>
-<<<<<<< HEAD
     <b-img rounded src="myImage" alt="image"></b-img>
-=======
-    <b-img rounded src="require('../static/picture.jpg')" alt="image"></b-img>
->>>>>>> 23da85699b4e6ced8e0ce4efc15fd11a88d6cd3b
   </div>
 </template>
 
@@ -15,11 +11,7 @@ export default {
   name: 'Image',
   data: function(){
     return {
-<<<<<<< HEAD
     myImage:''
-=======
-    image:''
->>>>>>> 23da85699b4e6ced8e0ce4efc15fd11a88d6cd3b
     }
   },
   sockets: {
