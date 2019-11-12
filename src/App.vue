@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+<<<<<<< HEAD
     <div v-if="started">
     <Question/>
     </div>
@@ -7,10 +8,19 @@
       <b-button @click="create">Créer la partie</b-button>
       <b-spinner variant="light" label="Spinning"></b-spinner>
     </div>
+=======
+    <b-nav tabs align="center">
+      <b-nav-item to='/test'>Test</b-nav-item>
+    </b-nav>
+    <!-- route outlet -->
+    <!-- component matched by the route will render here -->
+    <router-view></router-view>
+>>>>>>> Add routes with Vue Router
   </div>
 </template>
 
 <script>
+<<<<<<< HEAD
 import Question from './components/QestionComponent.vue'
 
 export default {
@@ -30,6 +40,8 @@ export default {
     }
   }
 }
+=======
+>>>>>>> Add routes with Vue Router
 
 </script>
 
@@ -45,5 +57,4 @@ export default {
   width: 100%;
   min-height: 100vh;
 }
-
 </style>
