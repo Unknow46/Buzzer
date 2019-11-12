@@ -1,5 +1,5 @@
 <template>
-  <div id="questions">
+  <div id="question">
       <div v-if="Mcquestions"> 
         <MCQ/>
       </div> 
@@ -9,16 +9,15 @@
       <div v-if="Audio"> 
         <MCQ/>
       </div>  
-    <div>
+    <div id="toolbar">
       <b-button squared variant="primary" @click="updateMCQ">Next question</b-button>
     </div>
   </div>
-
 </template>
 
 <script lang="js">
-import MCQ from './MCQComponent.vue';
-import Image from './ImageComponent.vue';
+import MCQ from './QuestionMCQ.vue';
+import Image from './QuestionImage.vue';
   
 export default {
   name: 'Question',
@@ -44,11 +43,15 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-    #questions {
+    #question {
         width: 70%;
         color: white;
         padding-top: 60px;
         padding-left: 40px;
         font-size: 20px;
+    }
+
+    #toolbar {
+        padding-top: 2rem;
     }
 </style>

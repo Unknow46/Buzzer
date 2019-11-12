@@ -29,7 +29,7 @@
                 log.d('socket connected')
             },
             'update:questions': function (data) {
-                console.log(`Received data on Questions ${data}`)
+                log.d(`Received data on Questions ${data}`)
                 this.question = data.question;
                 this.reponse1 = data.proposition[0];
                 this.reponse2 = data.proposition[1];
