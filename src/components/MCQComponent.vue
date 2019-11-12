@@ -10,22 +10,23 @@
   </div>
 </template>
 
-<script lang="js">
+<script>
+    import {log} from '../utils';
 
-export default {
-  name: 'MCQ',
-  data: function(){
-    return {
-    question :'Question ...',
-    reponse1 : 'Reponse',
-    reponse2 : 'Reponse',
-    reponse3 : 'Reponse',
-    reponse4 : 'Reponse'
-    }
-  },
-  sockets: {
+    export default {
+        name: 'MCQ',
+        data: function () {
+            return {
+                question: 'Question ...',
+                reponse1: 'Reponse',
+                reponse2: 'Reponse',
+                reponse3: 'Reponse',
+                reponse4: 'Reponse'
+            }
+        },
+        sockets: {
             connect: function () {
-                console.log('socket connected')
+                log.d('socket connected')
             },
             'update:questions': function (data) {
                 console.log(`Received data on Questions ${data}`)
@@ -34,18 +35,17 @@ export default {
                 this.reponse2 = data.proposition[1];
                 this.reponse3 = data.proposition[2];
                 this.reponse4 = data.proposition[3];
-
             },
             'update:state': function (state) {
-                console.log(`Received state ${state}`)
+                log.d(`Received state ${state}`)
             }
   }
 }
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
 .reponse {
   padding: 3%;
   text-align: justify;
