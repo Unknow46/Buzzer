@@ -8,6 +8,9 @@
             <p>Waiting for game to start.</p>
         </div>
     </div>
+    <div id="status">
+        <TeamStatus/>
+    </div>
     <div id="team">
         Teams
     </div>
@@ -16,12 +19,14 @@
 
 <script>
     import Question from './Question.vue';
+    import TeamStatus from "./TeamStatus";
     import {log} from '../utils';
 
     export default {
         name: "Game",
         components: {
-            Question
+            Question,
+            TeamStatus
         },
         data: () => {
             return {
