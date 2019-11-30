@@ -45,7 +45,9 @@
                 log.d(`Received player id ${player}`);
                 this.player = player;
                 this.team = this.teams[this.player.team];
-
+            },
+            'update:answer': function (team) {
+                this.makeToast(false, team);
             }
         },
         methods: {
@@ -54,6 +56,13 @@
             },
             buzz:function() {
                 this.$socket.emit('buzz', this.player.team);
+            },
+            makeToast: function(append = false, team) {
+                this.$bvToast.toast(`Team ${team} get the hand !`, {
+                    autoHideDelay: 2000,
+                    appendToast: append,
+                    toaster: 'b-toaster-bottom-full'
+                })
             }
         }
     }
