@@ -1,43 +1,43 @@
 <template>
-  <div id="question">
-      <div v-if="Mcquestions"> 
-        <MCQ/>
-      </div> 
-      <div v-if="Picture"> 
-        <Image/>
-      </div>
-      <div v-if="Audio"> 
-        <MCQ/>
-      </div>  
-    <div id="toolbar">
-      <b-button squared variant="primary" @click="updateMCQ">Next question</b-button>
+    <div id="question">
+        <div v-if="Mcquestions">
+            <MCQ/>
+        </div>
+        <div v-if="Picture">
+            <Image/>
+        </div>
+        <div v-if="Audio">
+            <MCQ/>
+        </div>
+        <div id="toolbar">
+            <b-button squared variant="primary" @click="updateMCQ">Next question</b-button>
+        </div>
     </div>
-  </div>
 </template>
 
 <script lang="js">
-import MCQ from './QuestionMCQ.vue';
-import Image from './QuestionImage.vue';
-  
-export default {
-  name: 'Question',
-  components: {
-    MCQ,
-    Image
-  },
-  data: function(){
-    return {
-    Mcquestions : true,
-    Picture : false,
-    Audio : false,
+    import MCQ from './QuestionMCQ.vue';
+    import Image from './QuestionImage.vue';
+
+    export default {
+        name: 'Question',
+        components: {
+            MCQ,
+            Image
+        },
+        data: function () {
+            return {
+                Mcquestions: true,
+                Picture: false,
+                Audio: false,
+            }
+        },
+        methods: {
+            updateMCQ: function () {
+                this.$socket.emit('nextQuestion');
+            }
+        }
     }
-  },
-  methods: {
-    updateMCQ:function(){
-      this.$socket.emit('nextQuestion');
-    }
-  }
-}
 
 </script>
 
