@@ -9,7 +9,8 @@
             <b-button v-for="team in teams" v-bind:key="team.id" @click="join(team.id)" v-bind:style="{ 'background-color': team.color }">TEAM {{ team.id }}</b-button>
         </div>
         <div id="buzzer" v-if="player != null">
-            <b-btn class="btn-circle btn-xl" :disabled="state !== 'started' || canAnswer === false" v-bind:style="{ 'background-color': team.color }" @click="buzz">{{ state }}</b-btn>
+            <b-btn class="btn-circle btn-xl" :disabled="state !== 'started' || canAnswer === false || locked === true" v-bind:style="{ 'background-color': team.color }" @click="buzz">{{
+                state }}</b-btn>
         </div>
     </div>
 </template>
@@ -22,7 +23,8 @@
         data: () => {
             return {
                 teams: [],
-                state: 'initial',
+                state : 'initial',
+                locked: false,
                 player: null,
                 team: null,
                 canAnswer: true
@@ -37,9 +39,10 @@
                     log.d(`Team can answer : ${this.canAnswer}`)
                 }
             },
-            'update:state': function (state) {
-                log.d(`Received state ${state}`);
-                this.state = state;
+            'update:state': function (game) {
+                log.d(`Received state ${game}`);
+                this.locked = game.locked;
+                this.state = game.state;
             },
             'update:player': function (player) {
                 log.d(`Received player id ${player}`);
@@ -121,7 +124,7 @@
         height: 12em;
         padding: 10px 16px;
         border-radius: 6em;
-        font-size: 24px;
+        font-size: x-large;
         line-height: 1.33;
         text-transform: uppercase;
     }
