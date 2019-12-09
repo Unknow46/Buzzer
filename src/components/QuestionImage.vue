@@ -6,6 +6,7 @@
 </template>
 
 <script lang="js">
+    import {log} from '../utils';
 
 export default {
   name: 'Image',
@@ -16,17 +17,17 @@ export default {
   },
   sockets: {
             connect: function () {
-                console.log('socket connected')
+                log.d('socket connected')
             },
             'update:questions': function (data) {
-                console.log(`Received data on Questions ${data}`)
+                log.d(`Received data on Questions ${data}`)
                 this.question = data;
             },
             'update:state': function (state) {
-                console.log(`Received state ${state}`)
+                log.d(`Received state ${state}`)
             }
-  }
-}
+        }
+    }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

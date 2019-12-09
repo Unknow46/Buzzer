@@ -1,6 +1,7 @@
 import Home from './components/Home';
 import NotFound from './pages/404.vue';
-import Game from './components/Game'
+import Game from './components/Game';
+import Buzzer from './components/Buzzer';
 
 /*
  Paths are resolved in the order of the list.
@@ -10,5 +11,6 @@ export const routes = [
     { path: '/',  component: Home, name: 'home' },
     { path: '/admin', component: { template: '<div>Admin View (TODO)</div>' }, name: 'admin' },
     { path: '/game', component: Game, name: 'game' },
+    { path: '/join', component: Buzzer, name: 'buzzer' },
     { path: '*', component: NotFound, name: '404' }
 ];

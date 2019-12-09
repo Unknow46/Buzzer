@@ -1,18 +1,18 @@
 <template>
-  <div id="question">
-      <div v-if="Mcquestions"> 
-        <MCQ/>
-      </div> 
-      <div v-if="Picture"> 
-        <Image/>
-      </div>
-      <div v-if="Audio"> 
-        <MCQ/>
-      </div>  
-    <div id="toolbar">
-      <b-button squared variant="primary" @click="updateMCQ">Next question</b-button>
+    <div id="question">
+        <div v-if="Mcquestions">
+            <MCQ/>
+        </div>
+        <div v-if="Picture">
+            <Image/>
+        </div>
+        <div v-if="Audio">
+            <MCQ/>
+        </div>
+        <div id="toolbar">
+            <b-button squared variant="primary" @click="updateMCQ">Next question</b-button>
+        </div>
     </div>
-  </div>
 </template>
 
 <script lang="js">
@@ -36,8 +36,6 @@ export default {
     updateMCQ:function(){
       this.$socket.emit('nextQuestion');
     }
-  }
-}
 
 </script>
 
