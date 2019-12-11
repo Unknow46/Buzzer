@@ -3,12 +3,12 @@
         <div v-if="Mcquestions">
             <MCQ/>
         </div>
-        <div v-if="Picture">
+        <!--<div v-if="Picture">
             <Image/>
         </div>
         <div v-if="Audio">
-            <MCQ/>
-        </div>
+            <Audio/>
+        </div>-->
         <div id="toolbar">
             <b-button squared variant="primary" @click="updateMCQ">Next question</b-button>
         </div>
@@ -17,18 +17,18 @@
 
 <script lang="js">
 import MCQ from './QuestionMCQ.vue';
-import Image from './QuestionImage.vue';
+//import Image from './QuestionImage.vue';
   
 export default {
   name: 'Question',
   components: {
     MCQ,
-    Image
+    //Image
   },
   data: function(){
     return {
-    Mcquestions : false,
-    Picture : true,
+    Mcquestions : true,
+    Picture : false,
     Audio : false,
     }
   },
@@ -36,6 +36,8 @@ export default {
     updateMCQ:function(){
       this.$socket.emit('nextQuestion');
     }
+  }
+}
 
 </script>
 
