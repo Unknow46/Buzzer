@@ -1,7 +1,7 @@
 <template>
   <div id="Image">
     <h1>Quelle est la référence de cet image ?</h1>
-    <b-img :src="myImage" alt="image"></b-img>
+    <b-img v-bind:src="myImage" alt="image"></b-img>
   </div>
 </template>
 
