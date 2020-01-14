@@ -1,0 +1,36 @@
+<template>
+    <div id="Image">
+        <h1>Quelle est la référence de cet image ?</h1>
+        <b-img rounded src="require('../static/picture.jpg')" alt="image"></b-img>
+    </div>
+</template>
+
+<script lang="js">
+    import {log} from '../utils';
+
+    export default {
+        name: 'Image',
+        data: function () {
+            return {
+                image: ''
+            }
+        },
+        sockets: {
+            connect: function () {
+                log.d('socket connected')
+            },
+            'update:questions': function (data) {
+                log.d(`Received data on Questions ${data}`)
+                this.question = data;
+            },
+            'update:state': function (state) {
+                log.d(`Received state ${state}`)
+            }
+        }
+    }
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style>
+
+</style>

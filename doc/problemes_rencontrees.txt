@@ -1,0 +1,11 @@
+Problèmes mineures :
+-> Familiarisation avec GitHub et Git
+
+Problèmes qui ont pris beaucoup de temps :
+-> Utilisation de nouveaux framework : compréhension de la synthaxe et du fonctionnement de Vue et Typescript
+-> Utilisation d'une socket dans un contexte vue-Typescript-socket : socket non déclaré dans l'ensemble du projet
+
+
+>>> Nous sommes donc passé sur un projet vue-socket car Typescript apporte plus d'inconvénient que d'avantage dans ce projet
+
+
