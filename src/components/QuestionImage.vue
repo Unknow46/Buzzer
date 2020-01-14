@@ -1,5 +1,5 @@
 <template>
-  <div id="Image">
+  <div id="ImageQ">
     <h1>Quelle est la référence de cet image ?</h1>
     <b-img v-bind:src="myImage" alt="image"></b-img>
   </div>
@@ -9,7 +9,7 @@
     import {log} from '../utils';
 
 export default {
-  name: 'Image',
+  name: 'ImageQ',
   data: function(){
     return {
     myImage:'../assets/minecraft.jpg'
