@@ -34,7 +34,7 @@
         sockets: {
             'update:state': function (state) {
                 log.d(`Received state ${state}`)
-                this.state = state;
+                this.state = state.state;
             }
         }
     }
