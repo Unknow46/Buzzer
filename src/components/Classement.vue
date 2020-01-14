@@ -2,7 +2,7 @@
     <div>
         <div id="classement-equipe">
             <ul id="Classement">
-                <li v-for="team in teams " v-bind:key="team" v-bind:style="{ borderColor: team.color}" id="' + team.id + '">
+                <li v-for="team in teams " v-bind:key="team" v-bind:style="{ borderColor: team.color}" v-bind:id="'t'+team.id">
                     {{ "Equipe " + team.id +" score :" + team.score}}
                 </li>
             </ul>
@@ -28,13 +28,12 @@
             'update:teams': function (teams) {
                 log.d(`Received teams ${teams}`);
                 this.teams = teams;
-
             },
             'update:state': function (state) {
                 log.d(`Received state ${state}`)
             },
             'update:answer': function (teamId) {
-                document.getElementById(teamId).style.color = this.teams[teamId].color;
+                document.getElementById('t'+teamId).style.backgroundColor = this.teams[teamId].color;
             }
         },
         methods: {
