@@ -3,7 +3,7 @@
         <b-modal ref="my-modal" hide-footer>
             <h3>L'équipe {{teamId}} a buzzé !</h3>
         </b-modal>
-        <h1>{{ question.question }}</h1>
+        <h2>{{ question.question }}</h2>
         <b-button id="0" class="reponse" block variant="dark" v-on:click="repondre"> A - {{ question.proposition[0] }}
         </b-button>
         <b-button id="1" class="reponse" block variant="dark" v-on:click="repondre"> B - {{ question.proposition[1] }}
@@ -42,8 +42,10 @@
         },
         methods: {
             repondre: function (event) {
+                console.log(this.question.response)
+                console.log(event.target.id)
                 if (this.question.teamId != -1) {
-                    if (this.question.reponseValide === event.target.id) {
+                    if (this.question.response == event.target.id) {
                         this.$socket.emit('validate', this.teamId);
                         this.$socket.emit('nextQuestion');
                     } else {

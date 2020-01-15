@@ -3,7 +3,7 @@
         <div id="classement-equipe">
             <ul id="Classement">
                 <li v-for="team in teams " v-bind:key="team" v-bind:style="{ borderColor: team.color}" v-bind:id="'t'+team.id">
-                    {{ "Equipe " + team.id +" score :" + team.score}}
+                    {{ "Equipe " + team.id +" - Points : " + team.score}}
                 </li>
             </ul>
         </div>
@@ -57,23 +57,24 @@
 </script>
 
 <style scoped>
-    #create-game{
+    /*#create-game{
         margin-left:40%;
         margin-right: 40%;
         margin-bottom: 3vw;
         margin-top: 3vw;
-    }
+    }*/
     ul {
         list-style:none;
+        padding-left:0;
     }
     li{
         border: solid 2px;
-        background-color: #585858;
+        background-color: #464646;
         text-align: center;
         color: white;
         padding-top: 20px;
         padding-bottom: 20px;
-
+        width : 100%;
         margin-top: 5px;
         text-shadow: 0 0 2px #000, 0 0 2px #000, 0 0 2px #000, 0 0 2px #000, 0 0 2px #000, 0 0 2px #000, 0 0 2px #000, 0 0 2px #000, 0 0 2px #000, 0 0 2px #000, 0 0 2px #000, 0 0 2px #000, 0 0 2px #000, 0 0 2px #000, 0 0 2px #000, 0 0 2px #000, 0 0 2px #000, 0 0 2px #000, 0 0 2px #000, 0 0 2px #000;
 

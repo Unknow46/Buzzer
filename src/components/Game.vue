@@ -45,15 +45,14 @@
         width: 70%;
         text-align: center;
     }
+    #team{
+        width:20%;
+    }
     #container {
         display: flex;
         min-width: 100vh;
         padding: 2em;
     }
-    #team{
-        margin-left: 200px;
-    }
-    h2{
-        margin-left: 100px;
-    }
+
+
 </style>
