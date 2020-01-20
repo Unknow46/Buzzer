@@ -9,19 +9,22 @@
         </div>
     </div>
     <div id="team">
-        Teams
+        <h2>Classement</h2>
+        <Classement/>
     </div>
     </div>
 </template>
 
 <script>
     import Question from './Question.vue';
+    import Classement from './Classement.vue';
     import {log} from '../utils';
 
     export default {
         name: "Game",
         components: {
-            Question
+            Question,
+            Classement
         },
         data: () => {
             return {
@@ -31,7 +34,7 @@
         sockets: {
             'update:state': function (state) {
                 log.d(`Received state ${state}`)
-                this.state = state;
+                this.state = state.state;
             }
         }
     }
@@ -50,9 +53,6 @@
         min-width: 100vh;
         padding: 2em;
     }
-<<<<<<< HEAD
-=======
 
 
->>>>>>> master
 </style>

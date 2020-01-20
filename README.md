@@ -1,8 +1,8 @@
 Moteur de jeu buzzeurs 
 Version web et mobile d'un jeu de question à choix multiple
 
-Dans 2 semaines sur icampus :
+Dernier Rendu :
 
-**Note de clarification**
-**Bachlog**
-**sprint bachlog sprint 1**
+Vidéo d'install (vimeo/youtube)
+vidéo de démo (powerpoint/wink)
+5 février oral M1
