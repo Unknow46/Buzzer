@@ -2,14 +2,13 @@
     <div id="home">
         <div>
             <img src="../assets/timer.png">
-            <p class="waiting">Waiting for a game to start<span>.</span><span>.</span><span>.</span></p>
+            <p class="waiting">Waiting for a game to start<span>.</span><span>.</span><span>.</span></p>    
         </div>
     </div>
 </template>
 
 <script>
     import {log} from '../utils';
-
     export default {
         name: "Home.vue",
         sockets: {
@@ -21,6 +20,14 @@
                 if (state === 'waiting for players') {
                     this.$router.push('game')
                 }
+            }
+        },
+        methods: {
+            start: function(){
+                this.$socket.emit('newGame',2,3);
+                this.$socket.emit('addPlayer',0);
+                this.$socket.emit('addPlayer',1);
+                this.$socket.emit('startGame');
             }
         }
     }
@@ -36,16 +43,13 @@
         min-height: 80vh;
         min-width: 100vh;
     }
-
     #home img {
         width: 15rem;
     }
-
     .waiting {
         text-transform: uppercase;
         font-size: xx-large;
     }
-
     .waiting span {
         font-size: 2em;
         animation-name: blink;
@@ -53,15 +57,12 @@
         animation-iteration-count: infinite;
         animation-fill-mode: both;
     }
-
     .waiting span:nth-child(2) {
         animation-delay: .2s;
     }
-
     .waiting span:nth-child(3) {
         animation-delay: .4s;
     }
-
     @keyframes blink {
         0% {
             opacity: .2;
