@@ -42,9 +42,17 @@
         width: 70%;
         text-align: center;
     }
+    #team{
+        width:20%;
+    }
     #container {
         display: flex;
         min-width: 100vh;
         padding: 2em;
     }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> master
 </style>
