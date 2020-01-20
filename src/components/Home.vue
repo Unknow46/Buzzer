@@ -2,7 +2,7 @@
     <div id="home">
         <div>
             <img src="../assets/timer.png">
-            <p class="waiting">Waiting for a game to start<span>.</span><span>.</span><span>.</span></p>    
+            <p class="waiting">Waiting for a game to start<span>.</span><span>.</span><span>.</span></p>
         </div>
     </div>
 </template>
@@ -21,14 +21,6 @@
                 if (state === 'waiting for players') {
                     this.$router.push('game')
                 }
-            }
-        },
-        methods: {
-            start: function(){
-                this.$socket.emit('newGame',2,3);
-                this.$socket.emit('addPlayer',0);
-                this.$socket.emit('addPlayer',1);
-                this.$socket.emit('startGame');
             }
         }
     }
