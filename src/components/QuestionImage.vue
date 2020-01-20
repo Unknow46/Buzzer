@@ -1,21 +1,21 @@
 <template>
-  <div id="ImageQ">
-    <h1>Quelle est la référence de cet image ?</h1>
-    <b-img v-bind:src="myImage" alt="image"></b-img>
-  </div>
+    <div id="Image">
+        <h1>Quelle est la référence de cet image ?</h1>
+        <b-img rounded src="require('../static/picture.jpg')" alt="image"></b-img>
+    </div>
 </template>
 
 <script lang="js">
     import {log} from '../utils';
 
-export default {
-  name: 'ImageQ',
-  data: function(){
-    return {
-    myImage:'../assets/minecraft.jpg'
-    }
-  },
-  sockets: {
+    export default {
+        name: 'Image',
+        data: function () {
+            return {
+                image: ''
+            }
+        },
+        sockets: {
             connect: function () {
                 log.d('socket connected')
             },
