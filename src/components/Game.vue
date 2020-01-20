@@ -51,8 +51,15 @@
         padding: 2em;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>>  init
+=======
+=======
+
+
+>>>>>>> master
+>>>>>>> d7fafa8f0f134707cd5d10cf317c768ba626433f
 </style>

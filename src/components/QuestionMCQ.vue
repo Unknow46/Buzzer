@@ -1,5 +1,18 @@
 <template>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  <div id="MCQ">
+    <h1>{{ question }}</h1>
+
+      <b-button disabled class="reponse" block variant="dark"> A -  {{ reponse1 }}</b-button>
+      <b-button disabled class="reponse" block variant="dark"> B -  {{ reponse2 }}</b-button>
+      <b-button disabled class="reponse" block variant="dark"> C -  {{ reponse3 }}</b-button>
+      <b-button disabled class="reponse" block variant="dark"> D -  {{ reponse4 }}</b-button>
+
+  </div>
+=======
+>>>>>>> d7fafa8f0f134707cd5d10cf317c768ba626433f
     <div id="MCQ">
         <b-modal ref="my-modal" hide-footer>
             <h3>L'équipe {{teamId}} a buzzé !</h3>
@@ -14,6 +27,7 @@
         <b-button id="3" class="reponse" block variant="dark" v-on:click="repondre"> D - {{ question.proposition[3] }}
         </b-button>
     </div>
+<<<<<<< HEAD
 =======
   <div id="MCQ">
     <h1>{{ question }}</h1>
@@ -25,6 +39,9 @@
 
   </div>
 >>>>>>>  init
+=======
+>>>>>>> master
+>>>>>>> d7fafa8f0f134707cd5d10cf317c768ba626433f
 </template>
 
 <script>
@@ -56,6 +73,10 @@
             'update:state': function (state) {
                 log.d(`Received state ${state}`)
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> d7fafa8f0f134707cd5d10cf317c768ba626433f
             },
             'update:answer': function (teamId) {
                 this.teamId = teamId;
@@ -76,8 +97,12 @@
                     }
                     this.teamId = -1;
                 }
+<<<<<<< HEAD
 =======
 >>>>>>>  init
+=======
+>>>>>>> master
+>>>>>>> d7fafa8f0f134707cd5d10cf317c768ba626433f
             }
   }
 }
