@@ -19,7 +19,7 @@
     import Question from './Question.vue';
     import Classement from './Classement.vue';
     import {log} from '../utils';
-
+    
     export default {
         name: "Game",
         components: {
@@ -53,6 +53,6 @@
         min-width: 100vh;
         padding: 2em;
     }
-
-
+    
+    
 </style>

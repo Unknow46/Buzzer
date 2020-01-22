@@ -15,9 +15,10 @@
     </div>
 </template>
 
-<script>
+<script lang="js">
+    import MCQ from './QuestionMCQ.vue';
     import {log} from '../utils';
-
+    import ImageQ from './QuestionImage.vue';
     export default {
         name: 'MCQ',
         props: ['question'],
@@ -38,7 +39,6 @@
                 this.teamId = teamId;
                 this.$refs['my-modal'].show();
             }
-
         },
         methods: {
             repondre: function (event) {

@@ -9,7 +9,6 @@
 
 <script>
     import {log} from '../utils';
-
     export default {
         name: "Home.vue",
         sockets: {
@@ -44,16 +43,13 @@
         min-height: 80vh;
         min-width: 100vh;
     }
-
     #home img {
         width: 15rem;
     }
-
     .waiting {
         text-transform: uppercase;
         font-size: xx-large;
     }
-
     .waiting span {
         font-size: 2em;
         animation-name: blink;
@@ -61,15 +57,12 @@
         animation-iteration-count: infinite;
         animation-fill-mode: both;
     }
-
     .waiting span:nth-child(2) {
         animation-delay: .2s;
     }
-
     .waiting span:nth-child(3) {
         animation-delay: .4s;
     }
-
     @keyframes blink {
         0% {
             opacity: .2;

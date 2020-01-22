@@ -19,7 +19,7 @@
     import MCQ from './QuestionMCQ.vue';
     import {log} from '../utils';
     import ImageQ from './QuestionImage.vue';
-
+    
     export default {
         name: 'Question',
         components: {
@@ -67,7 +67,6 @@
         padding-left: 40px;
         font-size: 20px;
     }
-
     #toolbar {
         padding-top: 2rem;
     }
