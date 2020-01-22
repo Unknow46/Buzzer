@@ -7,6 +7,7 @@
 
 <script lang="js">
     import {log} from '../utils';
+
 export default {
   name: 'ImageQ',
   data: function(){
@@ -31,4 +32,5 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
+
 </style>

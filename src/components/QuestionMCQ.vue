@@ -1,17 +1,17 @@
 <template>
-    <div id="question">
-        <div v-if="Mcquestions === true">
-            <MCQ :question="this.question"/>
-        </div>
-        <div v-if="Picture === true">
-            <ImageQ :question="this.question"/>
-        </div>
-        <div v-if="Audio === true">
-            <Audio :question="this.question"/>
-        </div>
-        <div id="toolbar">
-            <b-button squared variant="primary" @click="updateMCQ">Next question</b-button>
-        </div>
+    <div id="MCQ">
+        <b-modal ref="my-modal" hide-footer>
+            <h3>L'équipe {{teamId}} a buzzé !</h3>
+        </b-modal>
+        <h2>{{ question.question }}</h2>
+        <b-button id="0" class="reponse" block variant="dark" v-on:click="repondre"> A - {{ question.proposition[0] }}
+        </b-button>
+        <b-button id="1" class="reponse" block variant="dark" v-on:click="repondre"> B - {{ question.proposition[1] }}
+        </b-button>
+        <b-button id="2" class="reponse" block variant="dark" v-on:click="repondre"> C - {{ question.proposition[2] }}
+        </b-button>
+        <b-button id="3" class="reponse" block variant="dark" v-on:click="repondre"> D - {{ question.proposition[3] }}
+        </b-button>
     </div>
 </template>
 
@@ -20,52 +20,49 @@
     import {log} from '../utils';
     import ImageQ from './QuestionImage.vue';
     export default {
-        name: 'Question',
-        components: {
-            MCQ,
-            ImageQ
-        },
+        name: 'MCQ',
+        props: ['question'],
         data: function () {
             return {
-                Mcquestions: false,
-                Picture: false,
-                Audio: false,
-                question: { question: "No question yet !"}
+                teamId: -1,
+                loaded: false
             }
         },
         sockets: {
             connect: function () {
                 log.d('socket connected')
             },
-            'update:questions': function (data) {
-                this.question = data;
-                log.d(`Received data on Questions ${data}`);
-                this.Mcquestions = false;
-                this.Picture = false;
-                this.Audio = false;
-                if (data.type == "QCM") this.Mcquestions = true;
-                if (data.type == "Image") this.Pictures = true;
-                if (data.type == "Audio") this.Audio = true;
+            'update:state': function (state) {
+                log.d(`Received state ${state}`)
+            },
+            'update:answer': function (teamId) {
+                this.teamId = teamId;
+                this.$refs['my-modal'].show();
             }
         },
         methods: {
-            updateMCQ: function () {
-                this.$socket.emit('nextQuestion');
+            repondre: function (event) {
+                console.log(this.question.response)
+                console.log(event.target.id)
+                if (this.question.teamId != -1) {
+                    if (this.question.response == event.target.id) {
+                        this.$socket.emit('validate', this.teamId);
+                        this.$socket.emit('nextQuestion');
+                    } else {
+                        this.$socket.emit('reject', this.teamId);
+                    }
+                    this.teamId = -1;
+                }
             }
         }
     }
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-    #question {
-        width: 70%;
-        color: white;
-        padding-top: 60px;
-        padding-left: 40px;
-        font-size: 20px;
-    }
-    #toolbar {
-        padding-top: 2rem;
+    .reponse {
+        padding: 3%;
+        text-align: justify;
     }
 </style>

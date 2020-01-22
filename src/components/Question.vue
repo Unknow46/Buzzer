@@ -19,6 +19,7 @@
     import MCQ from './QuestionMCQ.vue';
     import {log} from '../utils';
     import ImageQ from './QuestionImage.vue';
+    
     export default {
         name: 'Question',
         components: {
@@ -54,6 +55,7 @@
             }
         }
     }
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
