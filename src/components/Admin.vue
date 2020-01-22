@@ -32,16 +32,16 @@
             'update:state': function (state){
                 log.d(`Received state ${state}`)
             }
-           
+
         },
         methods: {
             newGame: function () {
                 this.$socket.emit('newGame',this.$refs.nombreTeams.value, this.$refs.nombreQuestions.value);
+            },
+            startGame: function() {
+                this.$socket.emit('startGame');
             }
-            /*startGame: function() {
-                this.socket.emit('startGame');
-            }*/
-           
+
         }
     }
 </script>

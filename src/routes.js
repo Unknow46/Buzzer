@@ -1,5 +1,6 @@
 import Home from './components/Home';
 import NotFound from './pages/404.vue';
+import Admin from './components/Admin.vue'
 import Game from './components/Game';
 import Buzzer from './components/Buzzer';
 
@@ -9,7 +10,7 @@ import Buzzer from './components/Buzzer';
 */
 export const routes = [
     { path: '/',  component: Home, name: 'home' },
-    { path: '/admin', component: { template: '<div>Admin View (TODO)</div>' }, name: 'admin' },
+    { path: '/admin', component: Admin, name: 'admin' },
     { path: '/game', component: Game, name: 'game' },
     { path: '/join', component: Buzzer, name: 'buzzer' },
     { path: '*', component: NotFound, name: '404' }
