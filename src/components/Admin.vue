@@ -1,13 +1,11 @@
 <template>
 <div id="container">
-    <div id="champs">
+    <div id="champs"> 
         <input ref="nombreTeams" placeholder="Nombre d equipes">
         <input ref="nombreQuestions" placeholder="Nombre de questions">
-    </div>
-    <div id="create">
         <b-button squared variant="primary" @click="newGame">Créer Partie</b-button>
     </div>
-    <div id="launch">
+    <div id="launch" style="display:none">
         <b-button squared variant="primary" @click="startGame">Lancer Partie</b-button>
     </div>
 </div>
@@ -21,6 +19,7 @@
         name: "Admin",
         data: () => {
             return {
+                ready : false,
                 nombreTeams: this.$refs.nombreTeams.value,
                 nombreQuestions: this.$refs.nombreQuestions.value,
             }
@@ -31,17 +30,27 @@
             },
             'update:state': function (state){
                 log.d(`Received state ${state}`)
+                if(state.state == "ready"){
+                    document.querySelector('#launch').style.display = "block";
+                    document.querySelector('#champs').innerHTML = `<h1> La partie peut être lancée </h1>`;
+                }
+                if(state.state == "started"){
+                    document.querySelector('#champs').innerHTML = "<h1> La réponse à la question est : </h1>"
+                }
+            },
+            'update:questions': function (data) {
+                document.querySelector('#launch').innerHTML = data.proposition[data.response];
             }
-           
+
         },
         methods: {
             newGame: function () {
                 this.$socket.emit('newGame',this.$refs.nombreTeams.value, this.$refs.nombreQuestions.value);
+            },
+            startGame: function() {
+                this.$socket.emit('startGame');
             }
-            /*startGame: function() {
-                this.socket.emit('startGame');
-            }*/
-           
+
         }
     }
 </script>

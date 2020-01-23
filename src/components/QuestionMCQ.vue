@@ -16,9 +16,7 @@
 </template>
 
 <script lang="js">
-    import MCQ from './QuestionMCQ.vue';
     import {log} from '../utils';
-    import ImageQ from './QuestionImage.vue';
     export default {
         name: 'MCQ',
         props: ['question'],
@@ -42,8 +40,6 @@
         },
         methods: {
             repondre: function (event) {
-                console.log(this.question.response)
-                console.log(event.target.id)
                 if (this.question.teamId != -1) {
                     if (this.question.response == event.target.id) {
                         this.$socket.emit('validate', this.teamId);

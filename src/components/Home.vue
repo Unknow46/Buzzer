@@ -1,8 +1,9 @@
 <template>
     <div id="home">
         <div>
-            <img src="../assets/timer.png">
-            <p class="waiting">Waiting for a game to start<span>.</span><span>.</span><span>.</span></p>    
+            <b-button id="0" class="rooting" block squared variant="primary" v-on:click="game"> Projection partie </b-button>
+            <b-button id="0" class="rooting" block squared variant="primary" v-on:click="join"> Joueur </b-button>
+            <b-button id="0" class="rooting" block squared variant="primary" v-on:click="admin"> Gestion de la partie </b-button>
         </div>
     </div>
 </template>
@@ -28,12 +29,24 @@
                 this.$socket.emit('addPlayer',0);
                 this.$socket.emit('addPlayer',1);
                 this.$socket.emit('startGame');
+            },
+            game:function(){
+                this.$router.push("game");
+            },
+            join:function(){
+                this.$router.push("join");
+            },
+            admin:function(){
+                // if(identification()){
+                this.$router.push("admin");
+                //}
             }
         }
     }
 </script>
 
 <style scoped>
+
     #home {
         text-align: center;
         display: flex;
