@@ -1,8 +1,16 @@
-Moteur de jeu buzzeurs 
-Version web et mobile d'un jeu de question à choix multiple
+# Projet de quizz numérique
 
-Dernier Rendu :
+![image exemple](https://github.com/Unknow46/Buzzer/blob/master/doc/exemple.png)
 
-Vidéo d'install (vimeo/youtube)
-vidéo de démo (powerpoint/wink)
-5 février oral M1
+## Membres :
+
+## Composants :
+
+Front : https://github.com/Unknow46/Buzzer
+Back : https://github.com/octogene/quizz-engine
+
+## Dernier Rendu :
+
+Vidéo d'install (vimeo/youtube) :
+Vidéo de démo (powerpoint/wink) :
+
