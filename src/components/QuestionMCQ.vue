@@ -43,7 +43,7 @@
                 if (this.teamId != -1) {
                     if (this.question.response == event.target.id) {
                         this.$socket.emit('validate', this.teamId);
-                        this.$socket.emit('nextQuestion');
+                        //this.$socket.emit('nextQuestion');
                     } else {
                         this.$socket.emit('reject', this.teamId);
                     }
