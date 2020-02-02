@@ -40,7 +40,7 @@
         },
         methods: {
             repondre: function (event) {
-                if (this.question.teamId != -1) {
+                if (this.teamId != -1) {
                     if (this.question.response == event.target.id) {
                         this.$socket.emit('validate', this.teamId);
                         this.$socket.emit('nextQuestion');
