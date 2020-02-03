@@ -11,6 +11,6 @@ Back : https://github.com/octogene/quizz-engine
 
 ## Dernier Rendu :
 
-Vidéo d'install (vimeo/youtube) :
-Vidéo de démo (powerpoint/wink) :
+Vidéo d'install :
+Vidéo de démo : https://drive.google.com/file/d/1stXYdJc_wjbgkpDLnEhMQH2vON2vEJii/view?usp=sharing
 
